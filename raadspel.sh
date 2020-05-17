@@ -25,6 +25,14 @@ for i in 1 2 3; do
 	elif [[ "$getal" -lt "$guess" ]];then
 		echo "less"
 	fi
+	if [[ "$i" -eq 3 ]];then
+                echo '==========================' >> scoreboard.txt
+                echo "name = $name" >> scoreboard.txt
+                echo "date = $date" >> scoreboard.txt
+                echo "failed" >> scoreboard.txt
+                echo "attempts = 3" >> scoreboard.txt
+                echo '==========================' >> scoreboard.txt
+		echo "het getal was: $getal"
+                break
+	fi
 done
-echo $getal
-echo $guess
