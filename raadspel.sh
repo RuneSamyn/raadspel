@@ -3,5 +3,10 @@
 # raadspel
 
 getal=$(($RANDOM % 10 + 1))
-echo $getal
+read -p 'Raad welk getal het is ' -a guess
 
+if [[ "$getal" -eq "$guess" ]];then
+	echo "true"
+else
+	echo "false"
+fi
